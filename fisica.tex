@@ -1,6 +1,13 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\newcommand{\norm}[1]%
+{\ensuremath\left\vert{\!\!}\left\vert#1\right\vert{\!\!}\right\vert}
 
 \title{Física}
 \author{matesdades + victor}
@@ -11,6 +18,35 @@
 \maketitle
 
 \section{Cálculo vectorial}
+Los vectores en física son $n$-tuplas de 1, 2 o 3 coordenadas. En dos 
+dimensiones, frente a una transformación de coordenadas de rotación, los 
+vectores se transforman por la matriz de rotación
+\[
+	\begin{pmatrix}
+		\cos \theta & \sin \theta \\
+		-\sin \theta & \cos \theta \\
+	\end{pmatrix}\,,
+\]
+donde $\theta$ es el ángulo de rotación.
+
+El producto escalar de dos vectores $v,w$ es
+\[
+	\vec{v}\cdot \vec{w} = \norm{\vec{v}}\norm{\vec{w}} \cos \theta = \sum_{i} 
+	v_iw_i\,,
+\]
+donde $\theta$ es el ángulo más pequeño que forman los dos vectores.
+
+El producto vectorial de dos vectores tridimensionales es
+\[
+	\vec{v}\times\vec{w} =
+	\begin{vmatrix}
+		\hat{i} & \hat{j} & \hat{k}\\
+		v_1 & v_2 & v_3\\
+		w_1 & w_2 & w_3
+	\end{vmatrix}
+	 = \left(\sum_{j,k}^{} \varepsilon_{ijk}v_jw_k\right)_{i\in(1,2,3)}\,,
+\]
+donde $\varepsilon_{ijk}$ es el símbolo de Levi-Civita.
 
 \section{Cinemática}
 
