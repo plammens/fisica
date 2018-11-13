@@ -52,6 +52,32 @@ donde $\varepsilon_{ijk}$ es el símbolo de Levi-Civita.
 
 \subsection{Movimiento curvilíneo}
 \subsection{Coordenadas polares}
+Definimos una dirección radial $\hat{r}$ y una dirección azimutal 
+$\hat{\theta}$, perpendiculares entre ellas, de modo que
+\[
+	\hat{r} = \cos (\theta) \hat{i} + \sin (\theta)\hat{j} \qquad
+	\hat{\theta} = -\sin (\theta) \hat{i} + \cos(\theta) \hat{j}\,.
+\]. La posición en coordenadas polares 
+se expresa como
+\[
+	\vec{r} = r\hat{r}\,,
+\]
+donde $r$ es un escalar que indica la distancia (Euclidiana) al origen.
+
+Entonces, la velocidad es
+\begin{multline}
+	\frac{d}{dt} r\hat{r} = \frac{dr}{dt}\hat{r} + r\frac{d\hat{r}}{dt} = 
+	\frac{dr}{dt}\hat{r} + r\left(-\sin (\theta) \hat{i}\frac{d\theta}{dt} + 
+	\cos(\theta) \hat{j}\frac{d\theta}{dt}\right) =\\
+	= \frac{dr}{dt}\hat{r} + r\frac{d\theta}{dt}\hat{\theta} = \dot{r}\hat{r} + 
+	r\dot{\theta}\hat{\theta}\,.
+\end{multline}
+La aceleración es
+\begin{multline}
+	a = (\ddot{r}-r\dot{\theta}^2)\hat{r} + (2\dot{r}\dot{\theta} + 
+	r\ddot{\theta})\hat{\theta} 
+\end{multline}
+
 \subsection{Coordenadas intrínsecas}
 
 \section{Dinámica}
